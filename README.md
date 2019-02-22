@@ -27,7 +27,7 @@
 
 
 # new-laravel-project
-Simple bash script to create a new Laravel project, add to git and configure Homestead/Vagrant.
+Simple bash script to create a new Laravel project, create a git repo, push it and configure/run Homestead & Vagrant. 
 
 Motivation
 ----------
@@ -48,6 +48,8 @@ Feel free to adjust to your own needs. If you make changes that would be useful 
 
 The script is not marked as executable by default, if you wish to do so use: ```chmod +x new_laravel_project.sh```
 
+I like to keep my projects in a folder set like this: ```Awesome/awesome``` with the top level (capitalised) folder giving me a place to add any miscellaneous files that will not be added to the git repository, and the lowercase folder inside being the actual code/git repository. As such this script expects you to specify the project name in lowercase and it will automatically create the aforementioned folder structure. If you don't like this, do change it as you require. 
+
 Options:
 
 ```
@@ -62,7 +64,7 @@ Options:
 Example:
 
 ```
-bash new_laravel_project.sh --name SomeProjectName --repo-url git@github.com:myusername/myproject.git --edit-homestead --vagrant-up
+$ bash new_laravel_project.sh --name SomeProjectName --repo-url git@github.com:myusername/myproject.git --edit-homestead --vagrant-up
 ```
 
 Feel free to get in touch with feedback: [@cosmicvibes][1] [![alt text][1.2]][1]
